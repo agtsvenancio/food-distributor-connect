@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      distributor_leads: {
+        Row: {
+          acquisition_channel: number
+          company_name: string
+          company_size: number
+          consent: boolean
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          main_goal: number
+          marketing_budget: number
+          phone: string
+          submission_id: string
+        }
+        Insert: {
+          acquisition_channel: number
+          company_name: string
+          company_size: number
+          consent: boolean
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          main_goal: number
+          marketing_budget: number
+          phone: string
+          submission_id: string
+        }
+        Update: {
+          acquisition_channel?: number
+          company_name?: string
+          company_size?: number
+          consent?: boolean
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          main_goal?: number
+          marketing_budget?: number
+          phone?: string
+          submission_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
